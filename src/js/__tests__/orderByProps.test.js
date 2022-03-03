@@ -19,12 +19,4 @@ describe('sorting check', () => {
     ];
     expect(orderByProps(hero, sortOrder)).toEqual(expected);
   });
-
-  test('sorting check -Error', () => {
-    const sortOrder = ['noValue'];
-    function throwWrapper() {
-      orderByProps(hero, sortOrder);
-    }
-    expect(throwWrapper).toThrowError(new Error('Invalid property: noValue'));
-  });
 });
